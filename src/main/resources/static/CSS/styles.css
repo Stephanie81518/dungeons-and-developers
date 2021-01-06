@@ -25,9 +25,13 @@ nav a:hover{
 
 /* Side Bar */
 
+h2 {
+    color: white;
+}
+
 .SideBar {
     background-color: black;
-    color: white;
+    
 }
 
 .SideBar li{
@@ -35,9 +39,9 @@ nav a:hover{
     font-size: larger;
 }
 
-.SideBar li a {
+.SideBar a {
     text-decoration: none;
-    
+    color: white;
 }
 
 .SideBar a:hover {
