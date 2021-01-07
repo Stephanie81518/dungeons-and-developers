@@ -1,14 +1,19 @@
 package org.wecancodeit.reviews;
 
-public class CardGame {
+public class Game {
+
     private String name;
     private String description;
+    private String category;
     private String hashtag;
+    private Integer id;
 
-    public CardGame(String name, String description, String hashtag) {
+    public Game(String name, String description, String category,String hashtag, Integer id) {
         this.name = name;
         this.description = description;
+        this.category = category;
         this.hashtag = hashtag;
+        this.id = id;
     }
 
     public String getName() {
@@ -19,7 +24,15 @@ public class CardGame {
         return description;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public String getHashtag() {
         return hashtag;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

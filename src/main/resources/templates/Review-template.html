@@ -38,11 +38,11 @@
 </div>
 
 <div class="containertt">
-    <div th:each="vgame:${Videogames}">
-        <strong> <span th:text="${vgame.name}" style="font-family: 'Arial Narrow'">default</span></strong>
-        <p th:text="${vgame.description}">default</p>
-        <p th:text=" '#' + ${vgame.hashtag}"></p>
-        <hr>
+    <div th:each="game:${games}">
+    <strong> <span th:text="${game.name}" style="font-family: 'Arial Narrow'">default</span></strong>
+    <p th:text="${game.description}">default</p>
+    <p th:text=" '#' + ${game.hashtag}"></p>
+    <hr>
     </div>
 </div>
 

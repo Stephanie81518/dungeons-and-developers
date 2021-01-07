@@ -13,9 +13,9 @@
 
 <nav>
     <ul>
-        <li><a href="TableTopCategory.html">Table Top Games</a></li>
-        <li><a href="VideoGameCategory.html">Video Games</a></li>
-        <li><a href="CardGameCategory.html">Card Games</a></li>
+        <li><a href="TableTopCategory">Table Top Games</a></li>
+        <li><a href="VideoGameCategory">Video Games</a></li>
+        <li><a href="CardGameCategory">Card Games</a></li>
     </ul>
 </nav>
 
@@ -42,15 +42,15 @@
 
     <strong> <span th:text="${TableTopGame1.name}" style="font-family: 'Arial Narrow'">default</span></strong>
     <p th:text="${TableTopGame1.description}">default</p>
-    <p th:text=" '#' + ${TableTopGame1.hashtag}"></p>
+    <p th:text=" '#' + ${TableTopGame1.category}"></p>
     <hr>
     <strong> <span th:text="${TableTopGame2.name}" style="font-family: 'Arial Narrow'">default</span></strong>
     <p th:text="${TableTopGame2.description}">default</p>
-    <p th:text=" '#' + ${TableTopGame2.hashtag}"></p>
+    <p th:text=" '#' + ${TableTopGame2.category}"></p>
     <hr>
     <strong> <span th:text="${TableTopGame3.name}" style="font-family: 'Arial Narrow'">default</span></strong>
     <p th:text="${TableTopGame3.description}">default</p>
-    <p th:text=" '#' + ${TableTopGame3.hashtag}"></p>
+    <p th:text=" '#' + ${TableTopGame3.category}"></p>
     <hr>
 
 </div>
