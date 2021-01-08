@@ -21,7 +21,7 @@ Collection<Game> exploration = new ArrayList<>();
 Collection<Game> party = new ArrayList<>();
 
 public String category;
-
+ //Test comment
 public ReviewController(){
     Game dnd = new Game("Dungeons and Dragons","An open world RPG game",this.category,"RPG" + "Exploration",1);
     Game betrayal= new Game("Betrayal on the house on Haunted Hill","A Fun Party Game",this.category,"Party",2);
