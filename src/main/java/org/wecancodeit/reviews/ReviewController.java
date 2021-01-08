@@ -23,7 +23,7 @@ Collection<Game> party = new ArrayList<>();
 public String category;
 
 public ReviewController(){
-    Game dnd = new Game("Dungeons and Dragons","An open world RPG game",this.category,"RPG",1);
+    Game dnd = new Game("Dungeons and Dragons","An open world RPG game",this.category,"RPG" + "Exploration",1);
     Game betrayal= new Game("Betrayal on the house on Haunted Hill","A Fun Party Game",this.category,"Party",2);
     Game monopoly = new Game("Monopoly", "Players collect rent from their opponents, with the goal being to drive them into bankruptcy",
             this.category,"Horror",3);
