@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<h1 th:text="${category}">Table Top Games: </h1>
+
 <nav>
     <ul>
         <li><a href="TableTopCategory">Table Top Games</a></li>
@@ -36,7 +36,8 @@
         </a>
     </ul>
 </div>
-
+<h1 th:text="${category}">Table Top Games: </h1>
+<hr>
 <div class="containertt">
     <div th:each="vgame:${Videogames}">
         <strong> <span th:text="${vgame.name}" style="font-family: 'Arial Narrow'">default</span></strong>

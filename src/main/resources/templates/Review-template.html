@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<h1 th:text="${category}">Table Top Games: </h1>
+
 <nav>
     <ul>
         <li><a href="TableTopCategory">Table Top Games</a></li>
@@ -36,15 +36,25 @@
         </a>
     </ul>
 </div>
+<h1 th:text="${category}">Table Top Games: </h1>
+
+
 
 <div class="containertt">
     <div th:each="game:${games}">
+
     <strong> <span th:text="${game.name}" style="font-family: 'Arial Narrow'">default</span></strong>
     <p th:text="${game.description}">default</p>
     <p th:text=" '#' + ${game.hashtag}"></p>
-    <hr>
+
+        <br>
+        <hr>
     </div>
+
+
 </div>
+
+
 
 
 </body>
