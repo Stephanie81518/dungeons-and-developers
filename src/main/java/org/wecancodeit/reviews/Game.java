@@ -8,12 +8,14 @@ public class Game {
     private String hashtag;
     private Integer id;
 
+
     public Game(String name, String description, String category,String hashtag, Integer id) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.hashtag = hashtag;
         this.id = id;
+
     }
 
     public String getName() {
@@ -35,4 +37,6 @@ public class Game {
     public Integer getId() {
         return id;
     }
+
+
 }
