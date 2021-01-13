@@ -3,8 +3,9 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/layout.css">
+
+    <link rel="stylesheet" href="/static/CSS/styles.css">
+    <link rel="stylesheet" href="/static/CSS/layout.css">
     <title>Reviews</title>
 
 
@@ -36,13 +37,13 @@
         </a>
     </ul>
 </div>
-<h1 th:text="${category}">Table Top Games: </h1>
+<h1>Table Top Games: </h1>
 <hr>
 <div class="containertt">
-    <div th:each="vgame:${Videogames}">
-        <strong> <span th:text="${vgame.name}" style="font-family: 'Arial Narrow'">default</span></strong>
-        <p th:text="${vgame.description}">default</p>
-        <p th:text=" '#' + ${vgame.hashtag}"></p>
+    <div th:each="game:${gameCategories}">
+        <strong> <span th:text="${game.name}" style="font-family: 'Arial Narrow'">default</span></strong>
+        <p th:text="${game.description}">default</p>
+        <p th:text=" '#' + ${game.hashtag}"></p>
         <hr>
     </div>
 </div>

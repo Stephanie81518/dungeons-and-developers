@@ -1,21 +1,32 @@
 package org.wecancodeit.reviews;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Game {
 
     private String name;
     private String description;
     private String category;
     private String hashtag;
-    private Integer id;
+
+    @Id
+    @GeneratedValue
+    private long id;
 
 
-    public Game(String name, String description, String category,String hashtag, Integer id) {
+    public Game(String name, String description, String category,String hashtag, long id) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.hashtag = hashtag;
         this.id = id;
 
+    }
+
+    public Game() {
     }
 
     public String getName() {
@@ -34,9 +45,11 @@ public class Game {
         return hashtag;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
+
+
 
 
 }
