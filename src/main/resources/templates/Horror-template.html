@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <div th:each="horror:${horrorTags}">
+            <strong> <span th:text="${horror.name}" style="font-family: 'Arial Narrow'">default</span></strong>
+            <p th:text="${horror.description}">default</p>
+            <p th:text=" '#' + ${horror.hashtag}"></p>
+            <hr>
+        </div>
+        <a href="index.html"><button type="submit">Home</button></a>
+    </div>
+</body>
+</html>
