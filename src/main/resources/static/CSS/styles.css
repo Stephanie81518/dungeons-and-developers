@@ -1,0 +1,61 @@
+/* Main */
+body{
+    background-image: url(/static/Images/MainBackground.jpg);
+}
+
+/* Nav Bar */
+nav {
+    background-color: black;
+}
+
+nav li{
+    list-style-type: none;
+    font-size: larger;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    color: green;
+}
+
+
+/* Side Bar */
+
+h2 {
+    color: white;
+}
+
+.SideBar {
+    background-color: black;
+    
+}
+
+.SideBar li{
+    list-style-type: none;
+    font-size: larger;
+}
+
+.SideBar a {
+    text-decoration: none;
+    color: white;
+}
+
+.SideBar a:hover {
+    color: green;
+}
+
+/* main page*/
+
+
+.container{
+    margin: 10px;
+
+}
+
+h1{
+    color: green;
+}
