@@ -26,16 +26,29 @@ public UsernameService usernameService;
 
 
     @RequestMapping("/")
-    public String username(){
+    public String username(Model inModel){
+        usernameService.isValidLogin = true;
+        inModel.addAttribute("isValid",usernameService.isValidLogin());
+        usernameService.username=null;
         return "Username-Template";
     }
-    
+
 
     @RequestMapping("/setusername")
     public String home(Model inModel, @RequestParam String newUsername){
         usernameService.username = newUsername;
 
-        return "redirect:/Home";
+        if(newUsername.equals("")){
+            usernameService.isValidLogin = false;
+            inModel.addAttribute("isValid",usernameService.isValidLogin());
+            System.out.println(usernameService.isValidLogin);
+
+
+            return "Username-Template";
+        } else {
+            return "redirect:/Home";
+        }
+
     }
 
 
@@ -55,6 +68,7 @@ public UsernameService usernameService;
     @RequestMapping("/logout")
     public String logout(){
         usernameService.username.equals("");
+        usernameService.isValidLogin = true;
         return "redirect:/";
     }
 

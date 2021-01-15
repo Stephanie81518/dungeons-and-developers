@@ -12,14 +12,26 @@
 </head>
 <body>
 
+<nav>
+
+    <ul>
+        <li></li>
+        <li style="color: green"><strong>Dungeons and Developers!</strong></li>
+        <li></li>
+    </ul>
+
+</nav>
+
 
 <div class="containertt">
-    <p><span>Welcome To Dungeons and Developers!!</span></p>
+    <p><span style="color: green">Please Login</span></p>
     <form action="/setusername" method="POST">
         <label for="userbox">Enter Username: </label>
         <input type="text" id="userbox" name="newUsername"/>
         <button type="submit">Login</button>
     </form>
+
+    <th:block th:if="${!isValid}">Please enter a valid login name!</th:block>
     </div>
 
 
