@@ -60,19 +60,19 @@ h1 {
 }
 
 .containertt {
+    /*display: flex;*/
+    /*justify-content: center;*/
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid black;
     flex-direction: column;
     padding-bottom: 20px;
-
-
 }
-.gamesDisplay{
-    padding:20px;
+p{
+    text-align: center;
 }
 
-img{
-
+a{
+    justify-content: center;
 }

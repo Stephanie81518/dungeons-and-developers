@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/CSS/styles.css}"/>
     <link rel="stylesheet" th:href="@{/CSS/layout.css}"/>
-
     <title>Reviews</title>
 
 
@@ -15,8 +14,7 @@
 <nav>
     <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/Games">Games</a></li>
-        <li><a href="/Hashtags">Hashtags</a></li>
+        <li><a href="Games">Games</a></li>
 
     </ul>
 </nav>
@@ -39,30 +37,21 @@
     <!--    </ul>-->
 </div>
 
-
 <div class="containertt">
-    <p><strong th:text="${gameName}"></strong></p>
-    <div th:each="rev:${review}">
-    <p th:text="${rev.review}">def</p>
-    <div th:each="tag:${hashtags}">
-        <p th:text="${tag.name}"></p>
+    <h1>All Hashtags </h1>
+    <div th:each="hashtag:${hashtags}">
+        <strong><p th:text="${hashtag.name}" >default</p></strong></a>
+<!--        <p th:text="${game.description}">default</p>-->
+<!--        <p th:text="${game.category}"></p>-->
+        <hr>
     </div>
-    </div>
-    <hr>
 </div>
 
-<div class="containertt">
-<form th:action="'/hashtag/'+${gameId}" method="POST">
-    <label for="htbox">Enter Hashtag</label>
-    <input type="text" id="htbox" name="newHashtag"/>
-    <button type="submit">Add Hashtag</button>
-</form>
-</div>
 
 </body>
 
 <footer>
-    <a href="/index.html">
+    <a href="index.html">
         <button type="submit">Home</button>
     </a>
 </footer>
