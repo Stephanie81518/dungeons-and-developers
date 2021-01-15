@@ -13,13 +13,19 @@ public class Game {
     @Id
     @GeneratedValue
     private long id;
-    private String name;
+    public String name;
     private String description;
     private String category;
     @ManyToMany(mappedBy = "games")
     private Collection<HashTag> hashTags;
     @ManyToMany(mappedBy = "gamesRev")
     private Collection<Review> reviews;
+    @ManyToMany(mappedBy = "gamesComment")
+    private Collection<Comment> comments;
+
+
+
+
 
 
     public Game(String name, String category, String description) {
@@ -53,6 +59,10 @@ public class Game {
     }
     public Collection<Review>getReviews(){
         return reviews;
+    }
+
+    public Collection<Comment> getComments(){
+        return comments;
     }
 
     @Override

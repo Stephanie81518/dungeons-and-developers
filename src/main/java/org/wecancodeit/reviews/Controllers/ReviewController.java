@@ -26,6 +26,7 @@ public class ReviewController {
     inModel.addAttribute("gameName",gameStorage.getGameByID(id).getName());
     inModel.addAttribute("hashtags",gameStorage.getGameByID(id).getHashTags());
     inModel.addAttribute("gameId",gameStorage.getGameByID(id).getId());
+    inModel.addAttribute("comments",gameStorage.getGameByID(id).getComments());
     return "Review-template";
 }
 }

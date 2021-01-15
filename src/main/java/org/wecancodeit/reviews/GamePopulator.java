@@ -3,6 +3,7 @@ package org.wecancodeit.reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.reviews.Models.Comment;
 import org.wecancodeit.reviews.Models.Game;
 import org.wecancodeit.reviews.Models.HashTag;
 import org.wecancodeit.reviews.Models.Review;
@@ -18,6 +19,8 @@ public class GamePopulator implements CommandLineRunner {
     private HashTagRepository hashtagRepo;
     @Autowired
     private GameRepository gameRepository;
+    @Autowired
+    private CommentRepository commentRepository;
 
     public GamePopulator(GameStorage inGameStorage,ReviewStorage inReviewStorage) {
         this.inGameStorage = inGameStorage;
@@ -51,8 +54,19 @@ public class GamePopulator implements CommandLineRunner {
         Review dndReview = new Review("No matter your edition or specific RPG of choice, today D&D continues " +
                 "to be the measuring stick by which other pen-and-paper games.",dnd);
         Review betralReview = new Review("An Amazing Table Top game where you haunt your enemies",betrayal);
+        Review monopolyReview = new Review("Monopoly is THE worst board game ever. It takes forever and no one likes it.",monopoly);
+        Review amongusReview = new Review("Among Us is an excellent game to play with friends. Find the imposter before they destory your ship!",amongUs);
+        Review hadesReview = new Review("Hades puts you in a fight against demons. A great ARPG akin to the Diablo series. Play at your own peril!",hades);
+        Review detroitReview = new Review("Detroit Become Human is a choose your own adventure game where you play as a robot. It is pretty cool!",detroit);
         inReviewStorage.addReview(dndReview);
         inReviewStorage.addReview(betralReview);
+        inReviewStorage.addReview(monopolyReview);
+        inReviewStorage.addReview(amongusReview);
+        inReviewStorage.addReview(hadesReview);
+        inReviewStorage.addReview(detroitReview);
+
+        Comment dndComment = new Comment("DND is the best! Great Review!",dnd);
+        commentRepository.save(dndComment);
 
 
 //        Game retrievedGame = gameRepository.findById(dnd.getId()).get();
