@@ -31,7 +31,10 @@ public class HashTagController {
     public String hashtags(Model inModel){
         inModel.addAttribute("hashtags",gameStorage.retrieveAllHashtags());
         inModel.addAttribute("username",usernameService.getUsername());
-        return "Hashtag-Template";
+        if(usernameService.isUserLoggedIn()){
+            return "Hashtag-Template";
+        }
+        return "redirect:/";
     }
 
     @RequestMapping("Hashtags/{id}")
@@ -39,7 +42,10 @@ public class HashTagController {
         inModel.addAttribute("hashtagGames",gameStorage.getGameByID(id).getHashTags());
         inModel.addAttribute("gameName",gameStorage.getGameByID(id).getName());
         inModel.addAttribute("username",usernameService.getUsername());
-        return "Hgame-Template";
+        if(usernameService.isUserLoggedIn()){
+            return "Hgame-Template";
+        }
+        return "redirect:/";
     }
 
     @PostMapping("/hashtag/{gameId}")
@@ -48,7 +54,10 @@ public class HashTagController {
         HashTag addHashtag = new HashTag(newHashtag,newGame);
         reviewStorage.addHashtag(addHashtag);
         inModel.addAttribute("username",usernameService.getUsername());
-        return "redirect:/reviews/{gameId}";
+        if(usernameService.isUserLoggedIn()){
+            return "redirect:/reviews/{gameId}";
+        }
+        return "redirect:/";
     }
 
     @PostMapping("/comment/{gameId}")
@@ -57,6 +66,9 @@ public class HashTagController {
         Comment addComment = new Comment(newComment,newGame);
         commentRepository.save(addComment);
         inModel.addAttribute("username",usernameService.getUsername());
-        return "redirect:/reviews/{gameId}";
+        if(usernameService.isUserLoggedIn()){
+            return "redirect:/reviews/{gameId}";
+        }
+        return "redirect:/";
     }
 }

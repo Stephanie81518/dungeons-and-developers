@@ -5,7 +5,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UsernameService {
     public String username = null;
-    public boolean isValidLogin = true;
+    public boolean isValidLogin;
+    public boolean isUserLoggedIn;
 
 //    public UsernameService(String username) {
 //        this.username = username;
@@ -20,5 +21,9 @@ public class UsernameService {
 
     public boolean isValidLogin() {
         return isValidLogin;
+    }
+
+    public boolean isUserLoggedIn(){
+    return isUserLoggedIn;
     }
 }

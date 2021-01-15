@@ -38,11 +38,10 @@ public UsernameService usernameService;
     public String home(Model inModel, @RequestParam String newUsername){
         usernameService.username = newUsername;
 
+//        should put this code in the UsernameService
         if(newUsername.equals("")){
             usernameService.isValidLogin = false;
             inModel.addAttribute("isValid",usernameService.isValidLogin());
-            System.out.println(usernameService.isValidLogin);
-
 
             return "Username-Template";
         } else {
@@ -56,11 +55,15 @@ public UsernameService usernameService;
     public String games(Model inModel){
         inModel.addAttribute("games",gameStorage.retrieveAllGames());
         inModel.addAttribute("username",usernameService.getUsername());
-        return "Games-Template";
+        if(usernameService.isUserLoggedIn()){
+            return "Games-Template";
+        }
+        return "redirect:/";
     }
 
     @RequestMapping("/Home")
     public String goHome(Model inModel){
+        usernameService.isUserLoggedIn = true;
         inModel.addAttribute("username",usernameService.getUsername());
         return "Home-Template";
     }
@@ -69,6 +72,7 @@ public UsernameService usernameService;
     public String logout(){
         usernameService.username.equals("");
         usernameService.isValidLogin = true;
+        usernameService.isUserLoggedIn = false;
         return "redirect:/";
     }
 

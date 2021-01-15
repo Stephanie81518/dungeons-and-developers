@@ -31,6 +31,9 @@ public class ReviewController {
     inModel.addAttribute("gameId",gameStorage.getGameByID(id).getId());
     inModel.addAttribute("comments",gameStorage.getGameByID(id).getComments());
     inModel.addAttribute("username",usernameService.getUsername());
-    return "Review-template";
+    if(usernameService.isUserLoggedIn()){
+        return "Review-template";
+    }
+    return "redirect:/";
 }
 }
