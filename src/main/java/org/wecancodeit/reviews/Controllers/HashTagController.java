@@ -39,7 +39,7 @@ public class HashTagController {
     }
 
     @PostMapping("/hashtag/{gameId}")
-    public String addHashtag(Model inModel, @RequestParam String newHashtag,@PathVariable Long gameId){
+    public String addHashtag(@RequestParam String newHashtag,@PathVariable Long gameId){
         Game newGame = gameStorage.getGameByID(gameId);
         HashTag addHashtag = new HashTag(newHashtag,newGame);
         reviewStorage.addHashtag(addHashtag);
@@ -47,7 +47,7 @@ public class HashTagController {
     }
 
     @PostMapping("/comment/{gameId}")
-    public String addComment(Model inModel,@RequestParam String newComment, @PathVariable Long gameId){
+    public String addComment(@RequestParam String newComment, @PathVariable Long gameId){
         Game newGame = gameStorage.getGameByID(gameId);
         Comment addComment = new Comment(newComment,newGame);
         commentRepository.save(addComment);
