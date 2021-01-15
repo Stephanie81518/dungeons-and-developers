@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.reviews.ReviewService;
 import org.wecancodeit.reviews.Storage.GameStorage;
 import org.wecancodeit.reviews.Storage.ReviewStorage;
+import org.wecancodeit.reviews.UsernameService;
 
 @Controller
 public class ReviewController {
@@ -16,6 +17,8 @@ public class ReviewController {
 
     @Autowired
     private GameStorage gameStorage;
+    @Autowired
+    private UsernameService usernameService;
 
 
 
@@ -27,6 +30,7 @@ public class ReviewController {
     inModel.addAttribute("hashtags",gameStorage.getGameByID(id).getHashTags());
     inModel.addAttribute("gameId",gameStorage.getGameByID(id).getId());
     inModel.addAttribute("comments",gameStorage.getGameByID(id).getComments());
+    inModel.addAttribute("username",usernameService.getUsername());
     return "Review-template";
 }
 }

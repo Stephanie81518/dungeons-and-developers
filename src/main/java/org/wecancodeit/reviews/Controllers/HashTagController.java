@@ -14,6 +14,7 @@ import org.wecancodeit.reviews.Models.HashTag;
 import org.wecancodeit.reviews.ReviewService;
 import org.wecancodeit.reviews.Storage.GameStorage;
 import org.wecancodeit.reviews.Storage.ReviewStorage;
+import org.wecancodeit.reviews.UsernameService;
 
 @Controller
 public class HashTagController {
@@ -23,10 +24,13 @@ public class HashTagController {
     private ReviewStorage reviewStorage;
     @Autowired
     private CommentRepository commentRepository;
+    @Autowired
+    private UsernameService usernameService;
 
     @RequestMapping("Hashtags")
     public String hashtags(Model inModel){
         inModel.addAttribute("hashtags",gameStorage.retrieveAllHashtags());
+        inModel.addAttribute("username",usernameService.getUsername());
         return "Hashtag-Template";
     }
 
@@ -34,24 +38,25 @@ public class HashTagController {
     public String getGamesOnHashtag(Model inModel, @PathVariable Long id){
         inModel.addAttribute("hashtagGames",gameStorage.getGameByID(id).getHashTags());
         inModel.addAttribute("gameName",gameStorage.getGameByID(id).getName());
-
+        inModel.addAttribute("username",usernameService.getUsername());
         return "Hgame-Template";
     }
 
     @PostMapping("/hashtag/{gameId}")
-    public String addHashtag(@RequestParam String newHashtag,@PathVariable Long gameId){
+    public String addHashtag(Model inModel, @RequestParam String newHashtag,@PathVariable Long gameId){
         Game newGame = gameStorage.getGameByID(gameId);
         HashTag addHashtag = new HashTag(newHashtag,newGame);
         reviewStorage.addHashtag(addHashtag);
+        inModel.addAttribute("username",usernameService.getUsername());
         return "redirect:/reviews/{gameId}";
     }
 
     @PostMapping("/comment/{gameId}")
-    public String addComment(@RequestParam String newComment, @PathVariable Long gameId){
+    public String addComment(Model inModel, @RequestParam String newComment, @PathVariable Long gameId){
         Game newGame = gameStorage.getGameByID(gameId);
         Comment addComment = new Comment(newComment,newGame);
         commentRepository.save(addComment);
-
+        inModel.addAttribute("username",usernameService.getUsername());
         return "redirect:/reviews/{gameId}";
     }
 }

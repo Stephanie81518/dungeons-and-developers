@@ -16,6 +16,7 @@
 
         <li><a href="Games">Games</a></li>
         <li> <a href="Hashtags">Hashtags</a></li>
+        <li class="user" th:text="${username}"></li>
 
     </ul>
 </nav>
@@ -23,10 +24,19 @@
 <!-- Genre Bar -->
 
 <div class="SideBar">
-  <!--  <h2>Hashtags</h2>
-    <ul th:each="hashtag" >
-        <a href="RPG"><li>#RPG</li></a>
-    </ul>-->
+    <ul>
+
+        <li></li>
+
+
+        <li class="user"><a href="/logout">Logout</a></li>
+
+
+        <li></li>
+
+        <li></li>
+
+    </ul>
 </div>
 
 <!-- main content-->
@@ -34,6 +44,7 @@
 <div class="container">
     <h1>Dungeons & Developers!</h1>
     <p>Welcome to Dungeons & Developers. Where all your game review needs are met!</p>
+    <p th:text="'Welcome! ' + ${username}"></p>
 </div>
 </body>
 </html>

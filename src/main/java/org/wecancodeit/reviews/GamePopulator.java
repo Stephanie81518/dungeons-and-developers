@@ -46,7 +46,7 @@ public class GamePopulator implements CommandLineRunner {
 
         HashTag spooky = new HashTag("#spooky",betrayal,hades);
         HashTag nice = new HashTag("#nice",monopoly,dnd);
-        HashTag wicked = new HashTag("#wicked",detroit,dnd);
+        HashTag wicked = new HashTag("#wicked",detroit,dnd,amongUs);
         hashtagRepo.save(spooky);
         hashtagRepo.save(nice);
         hashtagRepo.save(wicked);
@@ -65,8 +65,8 @@ public class GamePopulator implements CommandLineRunner {
         inReviewStorage.addReview(hadesReview);
         inReviewStorage.addReview(detroitReview);
 
-        Comment dndComment = new Comment("DND is the best! Great Review!",dnd);
-        commentRepository.save(dndComment);
+//        Comment dndComment = new Comment("DND is the best! Great Review!",dnd);
+//        commentRepository.save(dndComment);
 
 
 //        Game retrievedGame = gameRepository.findById(dnd.getId()).get();
