@@ -9,11 +9,10 @@ public class Review {
     @Id
     @GeneratedValue
     private long id;
-    private String description;
+    private String review;
 
-    public Review(long id, String description) {
-        this.id = id;
-        this.description = description;
+    public Review( String review) {
+        this.review = review;
     }
 
     public Review() {
@@ -24,7 +23,7 @@ public class Review {
         return id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getReview() {
+        return review;
     }
 }

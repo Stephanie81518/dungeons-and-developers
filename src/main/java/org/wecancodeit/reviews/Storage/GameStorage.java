@@ -2,7 +2,9 @@ package org.wecancodeit.reviews.Storage;
 
 import org.springframework.stereotype.Service;
 import org.wecancodeit.reviews.GameRepository;
+import org.wecancodeit.reviews.HashTagRepository;
 import org.wecancodeit.reviews.Models.Game;
+import org.wecancodeit.reviews.Models.HashTag;
 
 import java.util.Optional;
 
@@ -10,9 +12,11 @@ import java.util.Optional;
 public class GameStorage {
 
     private GameRepository gameRepo;
+    private HashTagRepository hashTagRepository;
 
-    public GameStorage(GameRepository gameRepo) {
+    public GameStorage(GameRepository gameRepo, HashTagRepository hashTagRepository) {
         this.gameRepo = gameRepo;
+        this.hashTagRepository = hashTagRepository;
     }
 
   
@@ -24,11 +28,13 @@ public class GameStorage {
         return gameRepo.findAll();
     }
 
-    public void getGameByID(long id){
+    public Game getGameByID(long id){
         Optional<Game> retrievedGameOptional = gameRepo.findById(id);
         if(retrievedGameOptional.isPresent()){
             Game foundGame = retrievedGameOptional.get();
-
+            return foundGame;
         }
+
+        return null;
     }
 }

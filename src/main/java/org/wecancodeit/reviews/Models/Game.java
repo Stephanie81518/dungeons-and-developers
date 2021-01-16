@@ -45,4 +45,8 @@ public class Game {
     public long getId() {
         return id;
     }
+
+    public Collection<HashTag> getHashTags(){
+        return hashTags;
+    }
 }
