@@ -1,11 +1,14 @@
-/* Main */
-body{
-    background-image: url(/static/Images/MainBackground.jpg);
+*{
+font-family: 'Montserrat', sans-serif;
 }
-
 /* Nav Bar */
+.landingheader{
+    font-size: 2rem;
+    font-color: green;
+}
 nav {
-    background-color: black;
+    background-color: #362715;
+    font-size: larger;
 }
 
 nav li{
@@ -30,7 +33,7 @@ h2 {
 }
 
 .SideBar {
-    background-color: black;
+    background-color: #90A955;
     
 }
 
@@ -58,8 +61,13 @@ h2 {
 
 h1{
     color: green;
+    font-size: 2em;
+}
+
+footer {
+    color: green;
 }
 
 .user{
-    color: red;
+    color: #B94227;
 }
