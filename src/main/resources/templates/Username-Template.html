@@ -13,19 +13,18 @@
     <body>
 
         <nav class="landingheader">
-            <h1><strong>Dungeons and Developers!</strong></h1>
+            <h1><strong>Dungeons & Developers</strong></h1>
         </nav>
-
-        <div class="containertt">
-            <p><span style="color: green">Please Login</span></p>
-            <form action="/setusername" method="POST">
-                <label for="userbox">Enter Username: </label>
-                <input type="text" id="userbox" name="newUsername"/>
-                <button type="submit">Login</button>
-            </form>
-            <th:block th:if="${!isValid}">Please enter a valid login name!</th:block>
-            </div>
         <div class = img-container>
+        <div class="containertt">
+            <p><span style="color: green"><strong>Please Login</strong></span></p>
+            <form action="/setusername" method="POST">
+                <label for="userbox"><strong>Enter Username: </strong></label>
+                <input type="text" id="userbox" name="newUsername"/>
+                <button type="submit"><strong>Login</strong></button>
+            </form>
+            <th:block th:if="${!isValid}"><strong>Please enter a valid login name!</strong></th:block>
+            </div>
         </div>
     </body>
 

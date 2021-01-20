@@ -5,20 +5,23 @@ body {
 nav{
     position: sticky;
     top: 0;
+    width: 1920px;
 }
+
 .landingheader{
     display: flex;
     width: 1920px;
     height: 200px;
     justify-content: center;
+    position: relative;
 }
+
 .background-image{
 
 }
 nav ul{
     margin: 0 40px;
     display: flex;
-    width: 100%;
     justify-content: center;
 }
 
@@ -70,9 +73,7 @@ p{
     background-size: cover;
     position: relative;
 }
-a{
-    justify-content: center;
-}
+
 footer {
     display: flex;
     justify-content: center;
