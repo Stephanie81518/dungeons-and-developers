@@ -1,28 +1,25 @@
-
-/* Main */
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-   background-size: cover; 
+    width: 100%;
 }
-
-/* Nav Bar */
-
 
 nav{
     position: sticky;
     top: 0;
 }
+.landingheader{
+    display: flex;
+    width: 1920px;
+    height: 200px;
+    justify-content: center;
+}
+.background-image{
+
+}
 nav ul{
-    margin: 0 20px;
+    margin: 0 40px;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 nav li{
@@ -31,15 +28,14 @@ nav li{
 }
 
 /* Side Bar */
-
 h2 {
     display: flex;
     justify-content: center;
 }
-
 .SideBar {
     height: 100%;
-    width: 160px;
+    margin-top: 0;
+    width: 200px;
     position: fixed;
     overflow-x: hidden;
 }
@@ -47,32 +43,37 @@ h2 {
 .SideBar li{
     display: flex;
     justify-content: center;
-    padding: 30px 30px;
+    padding: 20px 20px;
 }
-
-
-
 /* main page*/
-
 h1 {
     display: flex;
     justify-content: center;
 }
 
 .containertt {
-    /*display: flex;*/
-    /*justify-content: center;*/
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+/*    border: 2px solid black;*/
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 p{
     text-align: center;
 }
-
+.img-container{
+    background-image: url("../Images/dungeonbackground.jpg");
+    width: 1920px;
+    height: 1280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 a{
+    justify-content: center;
+}
+footer {
+    display: flex;
     justify-content: center;
 }

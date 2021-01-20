@@ -6,45 +6,42 @@
     <title>Dungeons & Developers</title>
     <link rel="stylesheet" th:href="@{/CSS/styles.css}"/>
     <link rel="stylesheet" th:href="@{/CSS/layout.css}"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!--Nav Bar-->
 
-<nav>
-    <ul>
-
-        <li><a href="Games">Games</a></li>
-        <li> <a href="Hashtags">Hashtags</a></li>
-        <li class="user" th:text="${username}"></li>
-
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="Games">Games</a></li>
+            <li> <a href="Hashtags">Hashtags</a></li>
+            <li class="user" th:text="${username}"></li>
+        </ul>
+    </nav>
 
 <!-- Genre Bar -->
 
-<div class="SideBar">
-    <ul>
-
-        <li></li>
-
-
-        <li class="user"><a href="/logout">Logout</a></li>
-
-
-        <li></li>
-
-        <li></li>
-
-    </ul>
-</div>
+    <div class="SideBar">
+        <ul>
+            <li></li>
+            <li class="user"><a href="/logout">Logout</a></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 
 <!-- main content-->
 
-<div class="container">
-    <h1>Dungeons & Developers!</h1>
-    <p>Welcome to Dungeons & Developers. Where all your game review needs are met!</p>
-    <p th:text="'Welcome! ' + ${username}"></p>
-</div>
+    <div class="container">
+        <h1>Dungeons & Developers!</h1>
+        <p>Welcome to Dungeons & Developers. Where all your game review needs are met!</p>
+        <p th:text="'Welcome ' + ${username}+'!'"></p>
+    </div>
 </body>
+
+<footer>
+<p>©Dungeons & Developers, LLC</p>
+</footer>
 </html>

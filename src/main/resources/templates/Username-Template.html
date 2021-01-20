@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/CSS/styles.css}"/>
-    <link rel="stylesheet" th:href="@{/CSS/layout.css}"/>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{/CSS/styles.css}"/>
+        <link rel="stylesheet" th:href="@{/CSS/layout.css}"/>
+        <title>Dungeons & Developers</title>
+    </head>
 
-    <title>Reviews</title>
+    <body>
 
+        <nav class="landingheader">
+            <h1><strong>Dungeons and Developers!</strong></h1>
+        </nav>
 
-</head>
-<body>
-
-<nav>
-
-    <ul>
-        <li></li>
-        <li style="color: green"><strong>Dungeons and Developers!</strong></li>
-        <li></li>
-    </ul>
-
-</nav>
-
-
-<div class="containertt">
-    <p><span style="color: green">Please Login</span></p>
-    <form action="/setusername" method="POST">
-        <label for="userbox">Enter Username: </label>
-        <input type="text" id="userbox" name="newUsername"/>
-        <button type="submit">Login</button>
-    </form>
-
-    <th:block th:if="${!isValid}">Please enter a valid login name!</th:block>
-    </div>
-
-
-
-
-
-
-
-</body>
+        <div class="containertt">
+            <p><span style="color: green">Please Login</span></p>
+            <form action="/setusername" method="POST">
+                <label for="userbox">Enter Username: </label>
+                <input type="text" id="userbox" name="newUsername"/>
+                <button type="submit">Login</button>
+            </form>
+            <th:block th:if="${!isValid}">Please enter a valid login name!</th:block>
+            </div>
+        <div class = img-container>
+        </div>
+    </body>
 
 <footer>
-
+    <p>©Dungeons & Developers, LLC</p>
 </footer>
+</html>
