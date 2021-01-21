@@ -19,11 +19,11 @@
         <div class="containertt">
             <p><span style="color: green"><strong>Please Login</strong></span></p>
             <form action="/setusername" method="POST">
-                <label for="userbox"><strong>Enter Username: </strong></label>
+                <label for="userbox"><strong style="color: green">Enter Username: </strong></label>
                 <input type="text" id="userbox" name="newUsername"/>
                 <button type="submit"><strong>Login</strong></button>
             </form>
-            <th:block th:if="${!isValid}"><strong>Please enter a valid login name!</strong></th:block>
+            <th:block th:if="${!isValid}"><strong style="color: red">Please enter a valid login name!</strong></th:block>
             </div>
         </div>
     </body>
