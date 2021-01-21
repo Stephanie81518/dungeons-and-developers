@@ -12,14 +12,21 @@ body {
 nav{
     position: sticky;
     top: 0;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 1920px;
+>>>>>>> adbdad2267cc9d1ecaf1e63c99f01c6ca350a351
 }
+
 .landingheader{
     display: flex;
     width: 1920px;
     height: 200px;
     justify-content: center;
+    position: relative;
 }
+
 .background-image{
 
 }
@@ -77,9 +84,7 @@ p{
     background-size: cover;
     position: relative;
 }
-a{
-    justify-content: center;
-}
+
 footer {
     display: flex;
     justify-content: center;
