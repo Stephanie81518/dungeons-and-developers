@@ -11,7 +11,8 @@
 </head>
 
 <body>
-
+<div id="page-container">
+    <div id="content-wrap">
 
     <nav>
         <ul>
@@ -39,9 +40,14 @@
         <p>Welcome to Dungeons & Developers. Where all your game review needs are met!</p>
         <p th:text="'Welcome ' + ${username}+'!'"></p>
     </div>
+
+        <div class="homepage-image">
+            <img src="../Images/homepageimage.jpg" alt="homepageimage">
+        </div>
+
+    </div>
+    <footer id="footer"><p>©Dungeons & Developers, LLC</p></footer>
+    </div>
 </body>
 
-<footer>
-<p>©Dungeons & Developers, LLC</p>
-</footer>
 </html>
