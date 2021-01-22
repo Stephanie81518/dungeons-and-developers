@@ -44,8 +44,11 @@
                         <hr>
                     </div>
 
-                    <div th:each="tag:${hashtags}">
-                        <p th:text="${tag.name}"></p>
+                    <div th:each="tag:${hashtags}" class="hashtags">
+                        <p>
+                        <span th:text="${tag.name}"></span>
+                        <a th:href="'/deleteHashtag/' + ${tag.id} + '/' + ${gameId}" style="color: red">x</a>
+                        </p>
                     </div>
                 </div>
                     <hr>

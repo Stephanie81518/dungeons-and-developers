@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.wecancodeit.reviews.HashTagRepository;
 import org.wecancodeit.reviews.ReviewService;
 import org.wecancodeit.reviews.Storage.GameStorage;
 import org.wecancodeit.reviews.Storage.ReviewStorage;
@@ -19,6 +20,8 @@ public class ReviewController {
     private GameStorage gameStorage;
     @Autowired
     private UsernameService usernameService;
+    @Autowired
+    private HashTagRepository hashTagRepository;
 
 
 
@@ -36,4 +39,12 @@ public class ReviewController {
     }
     return "redirect:/";
 }
+    @RequestMapping("deleteHashtag/{id}/{gameId}")
+    public String deleteHashtag(@PathVariable Long id, @PathVariable Long gameId){
+        hashTagRepository.delete(hashTagRepository.findById(id).get());
+        System.out.println("hit delete");
+        return "redirect:/reviews/{gameId}";
+
+    }
+
 }
