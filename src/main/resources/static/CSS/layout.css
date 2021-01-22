@@ -7,6 +7,21 @@ nav{
     top: 0;
     width: 1920px;
 }
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+}
 
 .landingheader{
     display: flex;
@@ -73,8 +88,14 @@ p{
     background-size: cover;
     position: relative;
 }
-
-footer {
+.homepage-image {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
+/*
+footer {
+    bottom: 0;
+    position: sticky;
+
+}*/
