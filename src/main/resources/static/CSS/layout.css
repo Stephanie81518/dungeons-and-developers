@@ -2,21 +2,14 @@
     margin: 0;
 }
 
-/*
-body {
-    margin: fill;
-    width: 100%;
-}
-*/
+/*body {*/
+/*    */
+/*}*/
 
 nav{
     position: sticky;
     top: 0;
-<<<<<<< HEAD
-    width: 100%;
-=======
     width: 1920px;
->>>>>>> adbdad2267cc9d1ecaf1e63c99f01c6ca350a351
 }
 
 .landingheader{
@@ -69,7 +62,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-/*    border: 2px solid black;*/
+    /*    border: 2px solid black;*/
     flex-direction: column;
     padding-bottom: 40px;
 }
