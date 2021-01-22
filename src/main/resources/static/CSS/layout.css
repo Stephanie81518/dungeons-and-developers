@@ -9,12 +9,12 @@
 nav{
     position: sticky;
     top: 0;
-    width: 1920px;
+    /*width: 1920px;*/
 }
 
 .landingheader{
     display: flex;
-    width: 1920px;
+    background-size: cover;
     height: 200px;
     justify-content: center;
     position: relative;
@@ -71,13 +71,18 @@ p{
 }
 .img-container{
     background-image: url("../Images/usernameimagebetter.jpg");
-    width: 1920px;
-    height: 1280px;
+    height: 880px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    color: white;
+    font-weight: bold;
 }
 
+.img-container p{
+    color: white;
+    font-weight: bold;
+}
 footer {
     display: flex;
     justify-content: center;
