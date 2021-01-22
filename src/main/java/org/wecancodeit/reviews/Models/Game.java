@@ -24,10 +24,6 @@ public class Game {
     private Collection<Comment> comments;
 
 
-
-
-
-
     public Game(String name, String category, String description) {
         this.name = name;
         this.description = description;
